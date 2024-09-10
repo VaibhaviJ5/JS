@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(myFunction()); 
+        // Outputs: 'Hello from function!'
+        console.log(myVar);
+         // Outputs: undefined
+
+        var myVar = 'Hello, World!';
+
+        function myFunction() {
+            return 'Hello from function!';
+        }
+
+        // The function myFunction is hoisted and can be called before its declaration.
+        // The variable myVar is hoisted but initialized after the console.log statement, so it outputs undefined.
+    </script>
+</body>
+</html>

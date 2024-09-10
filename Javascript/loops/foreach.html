@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- The forEach method executes a provided function once for each array element. 
+    It is a higher-order function that takes a callback function as its argument. -->
+
+
+    <!-- callback: A function that is executed for each element in the array. It receives up to three arguments:
+
+        currentValue: The current element being processed.
+        index (optional): The index of the current element.
+        array (optional): The array that forEach is being called upon.
+        thisArg (optional): Value to use as this when executing callback. -->
+
+    <script>
+        // array.forEach(callback(currentValue [, index [, array]]) [, thisArg]);
+
+
+        // example1 Basic Example
+            const fruits = ['apple', 'banana', 'cherry'];
+
+            fruits.forEach(function(fruit) {
+                document.write(fruit);
+            });
+        // Output:
+        // apple
+        // banana
+        // cherry
+
+
+
+         // example2 Using Index
+         const numbers = [10, 20, 30];
+
+            numbers.forEach(function(number, index) {
+                document.write('Index:', index, 'Number:', number);
+            });
+            // Output:
+            // Index: 0 Number: 10
+            // Index: 1 Number: 20
+            // Index: 2 Number: 30
+
+
+            // example3 Using Arrow Function 
+            const colors = ['red', 'green', 'blue'];
+
+            colors.forEach(color => document.write(color));
+            // Output:
+            // red
+            // green
+            // blue
+
+
+
+            // example4 Using thisArg
+
+
+            function Printer(prefix) {
+                this.prefix = prefix;
+                    }
+
+                    Printer.prototype.print = function(array) {
+                        array.forEach(function(item) {
+                            document.write(this.prefix, item);
+                        }, this); // Pass `this` as the `thisArg`
+                    };
+
+                    const printer = new Printer('Item:');
+                    printer.print(['apple', 'banana', 'cherry']);
+                    // Output:
+                    // Item: apple
+                    // Item: banana
+                    // Item: cherry
+
+
+
+//  Key Points
+// Does Not Modify the Original Array: The forEach method does not change the array it is called on,
+//  though the callback function may.
+// Cannot Be Stopped: Unlike for loops, forEach cannot be terminated early with a break statement.
+//  To exit early, you need to use a traditional loop or another method.
+// Returns undefined: The forEach method always returns undefined, which is different from some other
+//  array methods like map, which return a new array.
+
+
+// Summary
+// The forEach method is a convenient way to iterate over array elements and perform operations on each element. 
+// It enhances readability and is particularly useful for performing actions on each item in an array, 
+// especially when you don’t need to break out of the loop or need to maintain a specific context (this).
+
+
+
+
+
+
+    </script>
+</body>
+</html>

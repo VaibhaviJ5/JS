@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    A for...in loop is used to iterate over the enumerable properties of an object.
+
+        // example1
+       // Iterate over the properties of an object
+        const person = {
+            name: 'Alice',
+            age: 25,
+            city: 'New York'
+        };
+
+        for (const key in person) {
+           document.write(`${key}: ${person[key]}`);
+        }
+
+        // example2
+        // carname : nano this is considered as key 
+        const car={
+            carname:'nano', 
+            model:'2022',
+            city: 'mumbai'
+        };
+
+            for (const key in car){
+                document.write(`${key}: ${car[key]}`);
+
+        }
+
+
+
+    </script>
+</body>
+</html>

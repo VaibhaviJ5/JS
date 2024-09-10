@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByTagName Example</title>
+</head>
+<body>
+    <!-- Description: Returns a live HTMLCollection of elements with the specified tag name. -->
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <script>
+        // Get all <p> elements
+        var paragraphs = document.getElementsByTagName('p');
+        for (var i = 0; i < paragraphs.length; i++) {
+           document.write(paragraphs[i].textContent);
+            
+            // Outputs: Paragraph 1, Paragraph 2, Paragraph 3
+        }
+    </script>
+</body>
+</html>

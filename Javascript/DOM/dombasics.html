@@ -1,0 +1,38 @@
+<!-- In JavaScript, the DOM (Document Object Model) represents the structure of an HTML or XML document as a
+ tree of objects. Each object corresponds to a part of the document, such as elements, attributes, and text. 
+The DOM allows programs to dynamically access and manipulate the content, structure, and style of documents -->
+
+
+
+Here are the main types and a basic definition of the DOM:
+
+1. Document Object
+Definition: The root object representing the entire document. It provides access to the document’s content and methods to manipulate it.
+Example: document is the global object in JavaScript representing the current HTML or XML document.
+2. Element Node
+Definition: Represents an element in the document (e.g., <div>, <p>, <a>). It contains attributes, child nodes, and text.
+Example: <div id="example">Hello</div> creates an Element node for the <div> tag.
+3. Text Node
+Definition: Represents the text within an element or attribute. It does not have any child nodes.
+Example: In <p>Hello World</p>, "Hello World" is a Text node.
+4. Attribute Node
+Definition: Represents an attribute of an element. It holds the name and value of the attribute.
+Example: In <input type="text" id="username">, type and id are Attribute nodes with their respective values.
+5. Comment Node
+Definition: Represents comments in the document. Comments do not affect the document's display but can be useful for annotations.
+Example: <!-- This is a comment --> creates a Comment node.
+6. DocumentFragment
+Definition: A lightweight container used to hold a part of the document's content. It is not part of the main DOM tree and is useful for performing batch operations.
+Example: Creating a DocumentFragment allows you to build a new structure of nodes off-screen and then insert it into the document.
+
+
+
+Basic Methods for Manipulating the DOM:
+getElementById(id): Returns the element with the specified id.
+getElementsByClassName(className): Returns a live HTMLCollection of elements with the specified class name.
+getElementsByTagName(tagName): Returns a live HTMLCollection of elements with the specified tag name.
+querySelector(selector): Returns the first element that matches the specified CSS selector.
+querySelectorAll(selector): Returns a static NodeList of all elements that match the specified CSS selector.
+createElement(tagName): Creates a new element node with the specified tag name.
+appendChild(node): Appends a node to the end of the child nodes of a specified parent node.
+removeChild(node): Removes a child node from the DOM.

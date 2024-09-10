@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Number Methods and Properties provide utilities for dealing with numbers,
+        //  including formatting and handling special values.
+
+        // toString()
+
+        // Definition: Converts a number to a string.
+        // Example:
+
+                let num1 = 123;
+                document.write(num1.toString()+"<br>");
+                 // Output: "123"
+
+
+        // toFixed(digits)
+        // Definition: Formats a number using fixed-point notation.
+        // Example:
+                let num2 = 123.456;
+                document.write(num2.toFixed(2)+"<br>");
+                // Output: "123.46"
+
+
+
+        // toExponential([fractionDigits])
+
+        // Definition: Returns a string representing the number in exponential notation.
+        // Example:
+
+                let num = 123456;
+                document.write(num.toExponential(2)+"<br>");
+                 // Output: "1.23e+5"
+
+
+
+         //  Number.MAX_VALUE
+        // Definition: The largest positive finite value representable in JavaScript.
+        // Example:
+
+        document.write(Number.MAX_VALUE+"<br>"); 
+                // Output: 1.7976931348623157e+308
+
+
+        //  Number.MIN_VALUE
+        // Definition: The smallest positive value representable in JavaScript (closest to zero).
+        // Example:
+
+        document.write(Number.MIN_VALUE+"<br>");
+                     // Output: 5e-324
+
+
+
+
+        // Number.POSITIVE_INFINITY
+        // Definition: Represents positive infinity.
+        // Example:
+
+        document.write(Number.POSITIVE_INFINITY+"<br>"); 
+            // Output: Infinity
+
+
+
+        // Number.NEGATIVE_INFINITY
+        // Definition: Represents negative infinity.
+        // Example:
+
+        document.write(Number.NEGATIVE_INFINITY+"<br>");
+                 // Output: -Infinity
+
+
+
+
+        // parseInt(string, radix)
+        // Definition: Parses a string argument and returns an integer of the specified radix (base).
+        // Example:
+
+                let str2 = "123";
+                document.write(parseInt(str2, 10)+"<br>"); 
+                // Output: 123
+
+
+
+
+        // parseFloat(string)
+        // Definition: Parses a string argument and returns a floating-point number.
+        // Example:
+
+            let str = "123.456";
+            document.write(parseFloat(str)+"<br>"); // Output: 123.456
+        
+    </script>
+</body>
+</html>

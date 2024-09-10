@@ -1,0 +1,46 @@
+<!-- In JavaScript, "quantifiers" typically refer to mechanisms for specifying the quantity or frequency of operations, particularly in the context of regular expressions and loops. Here’s a brief overview of how quantifiers are used in these contexts:
+
+1. Regular Expression Quantifiers
+In regular expressions, quantifiers specify how often an element in the pattern should occur. Here are the common quantifiers:
+
+* (Asterisk): Matches 0 or more occurrences of the preceding element.
+Example: /a*/ matches "", "a", "aa", "aaa", etc.
+
++ (Plus): Matches 1 or more occurrences of the preceding element.
+Example: /a+/ matches "a", "aa", "aaa", etc., but not ""
+
+? (Question Mark): Matches 0 or 1 occurrence of the preceding element.
+Example: /a?/ matches "", "a", but not "aa"
+
+{n} (Curly Braces with a Number): Matches exactly n occurrences of the preceding element.
+Example: /a{3}/ matches "aaa" but not "aa" or "aaaa"
+
+{n,} (Curly Braces with a Minimum Number): Matches n or more occurrences of the preceding element.
+Example: /a{2,}/ matches "aa", "aaa", "aaaa", etc.
+
+{n,m} (Curly Braces with a Range): Matches between n and m occurrences of the preceding element.
+Example: /a{2,4}/ matches "aa", "aaa", "aaaa", but not "a" or "aaaaa"
+
+*?, +?, ??, {n,m}?: These are "lazy" or "non-greedy" versions of the quantifiers. They match as few characters as possible.
+Example: /<.*?>/ matches "<>", "<a>", but not "<aaaaa>" -->
+  
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Regular Expression Quantifiers: Control the number of times a pattern must occur in a string.</h1>
+        <script>
+        const regex = /a{2,4}/; 
+        // Matches "aa", "aaa", "aaaa"
+        const str = "aaaab";
+        document.write(str.match(regex));
+         // Output: ["aaaa"]
+                
+        </script>
+    </body>
+    </html>    
+

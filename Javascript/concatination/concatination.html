@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Using the + Operator:
+        let firstName = "John";
+        let lastName = "Doe";
+        let fullName = firstName + " " + lastName;
+        document.write(fullName + "<br>"); 
+        // Output: John Doe
+
+        // Using the concat() Method:
+        let greeting = "Hello";
+        let name = "Alice";
+        let message = greeting.concat(", ", name, "!");
+        document.write(message + "<br>"); 
+        // Output: Hello, Alice!
+
+        // using templates literals
+        let city = "New York";
+        let country = "USA";
+        let place = `${city}, ${country}`;
+        document.write(place + "<br>"); 
+        // Output: New York, USA  
+
+
+
+        
+        // <h2> array concatination </h2>
+
+        // Using the concat() Method:
+        let array1 = [1, 2, 3];
+        let array2 = [4, 5, 6];
+        let combinedArray = array1.concat(array2);
+        document.write(combinedArray + "<br>"); 
+        // Output: [1, 2, 3, 4, 5, 6]
+
+        // Using the Spread Operator:
+        let arrayA = [7, 8, 9];
+        let arrayB = [10, 11, 12];
+        let mergedArray = [...arrayA, ...arrayB];
+        document.write(mergedArray); 
+        // Output: [7, 8, 9, 10, 11, 12]
+
+        // Using Array push() with Spread Operator:
+
+        let initialArray = [1, 2];
+        let additionalItems = [3, 4, 5];
+        initialArray.push(...additionalItems);
+        document.write(initialArray); 
+        // Output: [1, 2, 3, 4, 5]
+
+
+    </script>
+</body>
+</html>

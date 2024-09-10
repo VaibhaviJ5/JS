@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>createElement Example</title>
+</head>
+<body>
+    <!-- Description: Creates a new element node with the specified tag name. -->
+    <div id="container"></div>
+    <script>
+        // Create a new <p> element
+        var newParagraph = document.createElement('p');
+        newParagraph.textContent = 'This is a new paragraph.';
+        
+        // Append the new paragraph to the div with id 'container'
+        var container = document.getElementById('container');
+        container.appendChild(newParagraph);
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Creating an Object:
+            let person = {
+                name: "John",
+                age: 30,
+                isStudent: false
+            };
+            // we get output in three different line 
+            document.write("Name: " + person.name + "<br>");
+            document.write("Age: " + person.age + "<br>");
+            document.write("Is Student: " + person.isStudent + "<br>");
+            // output in single line
+            document.write("my name is" +person.name+ "and i am "+ person.age + "<br>");
+
+
+
+
+            // Adding a Method to an Object:
+       
+            let car = {
+                make: "Toyota",
+                model: "Camry",
+                year: 2022,
+                displayInfo: function() {
+                    return this.make + " " + this.model + " (" + this.year + ")";
+                }
+            };
+
+            document.write("Car Info: " + car.displayInfo() + "<br>");
+
+
+
+
+            // Using Bracket Notation:
+            let book = {
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "year": 1960
+            };
+            // we get output in three different line 
+            document.write("Title: " + book["title"] + "<br>");
+            document.write("Author: " + book["author"] + "<br>");
+            document.write("Year: " + book["year"] + "<br>");
+            // output in single line
+            document.write("the book " +book["title"]+ "was written by "+ book["author"] + "in the year "+ book["year"] + "<br>");
+
+
+
+            // nested objects 
+            let company = {
+            name: "Tech Innovations",
+            location: {
+                city: "San Francisco",
+                state: "CA"
+            },
+            employees: 150
+            };
+
+            document.write("Company Name: " + company.name + "<br>");
+            document.write("Location: " + company.location.city + ", " + company.location.state + "<br>");
+            document.write("Number of Employees: " + company.employees + "<br>");
+
+    </script>
+</body>
+</html>

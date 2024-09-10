@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // The map() method creates a new array with the results of calling a provided 
+        // function on every element in the calling array.
+                
+        var numbers = [1, 2, 3, 4, 5];
+
+        // map() - Creates a new array with the results of calling a function on every element
+        var doubled = numbers.map(function(num) {
+            return num * 2;
+        });
+
+        document.write(doubled + "<br>"); 
+
+        // op: 2,4 ,6,8,10
+
+
+        // Example: Using map to double each number in an array
+
+        // method 2
+                // const numbers = [1, 2, 3, 4, 5];
+                // const doubledNumbers = numbers.map(number => number * 2);
+
+                // document.write('<h3>Using map()</h3>');
+                // document.write('<p>Doubled Numbers: ' + doubledNumbers.join(', ') + '</p>');
+
+                // using map()
+                // doubled number: 2,4,6,8,10
+    </script>
+</body>
+</html>

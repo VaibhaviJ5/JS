@@ -1,0 +1,21 @@
+<!-- This event handler is triggered when a key is pressed down while the element is focused. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onkeydown Example</title>
+</head>
+<body>
+    <input type="text" id="inputField" onkeydown="keyPressed(event)" placeholder="Type something">
+
+    <script>
+        function keyPressed(event) {
+            console.log('Key pressed: ' + event.key);
+
+            // optional
+            alert ('Key pressed: ' + event.key);
+            
+        }
+    </script>
+</body>
+</html>

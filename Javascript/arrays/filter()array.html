@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//  The filter() method creates a new array with all elements that pass the test
+//  implemented by the provided function.
+
+        // Example: Using filter to get numbers greater than 3
+        const numbers = [1, 2, 3, 4, 5];
+        const filteredNumbers = numbers.filter(number => number > 3);
+
+        document.write('<h3>Using filter()</h3>');
+        document.write('<p>Numbers Greater Than 3: ' + filteredNumbers.join(', ') + '</p>');
+        // OP:Using filter()
+        // Numbers Greater Than 3: 4, 5
+
+        //   example2
+          var evenNumbers = numbers.filter(function(num) {
+                return num % 2 === 0;
+            });
+
+            document.write(evenNumbers + "<br>"); 
+
+            // OP:2,4
+    </script>
+</body>
+</html>

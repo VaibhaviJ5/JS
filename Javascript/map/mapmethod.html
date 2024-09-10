@@ -1,0 +1,91 @@
+<!-- In JavaScript, the Map object is a collection of key-value pairs where both the keys and values can be of any type.
+ The Map object maintains the insertion order of its elements.
+ Here are the key methods and properties of the Map object: -->
+
+
+ <!-- Creating a Map
+new Map([iterable]): Creates a new Map object.
+ If an iterable (like an array) of key-value pairs is provided, it initializes the map with those pairs. -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <script>
+        //  map.set(key, value): Adds a new key-value pair to the Map. If the key already exists, its value is updated.
+        const map = new Map();
+        map.set('a', 1);
+        map.set('b', 2);
+
+        // map.get(key): Returns the value associated with the key. If the key doesn't exist, it returns undefined.
+        document.write(map.get('a'));
+        
+        // 1
+
+        // map.has(key): Returns true if the Map contains the specified key, otherwise false.
+
+       document.write(map.has('b'));
+        // true
+
+
+        // map.delete(key): Removes the key-value pair associated with the key. Returns true if the pair was removed, false otherwise.
+        map.delete('a');
+        document.write(map.has('a'));
+      // false
+
+    //   map.clear(): Removes all key-value pairs from the Map.
+
+        map.clear();
+
+
+
+// Iteration Methods
+        // map.keys(): Returns an iterator over the keys in the Map.
+        for (const key of map.keys()) {
+            documrnt.write(key);
+        }
+
+
+        // map.values(): Returns an iterator over the values in the Map
+
+             for (const value of map.values()) {
+            document.write(value);
+            }
+         // map.entries(): Returns an iterator over the [key, value] pairs in the Map. 
+            // This is the default iterator used by for...of.
+
+            for (const [key, value] of map.entries()) {
+                document.write(`${key}: ${value}`);
+            }
+         // map.forEach(callback[, thisArg]): Executes a provided function once for each key-value pair in the Map. 
+            // The thisArg is optional and sets the this value for the callback.
+                     map.forEach((value, key) => {
+                    document.write(`${key}: ${value}`);
+                });
+                // Properties
+                // map.size: Returns the number of key-value pairs in the Map
+
+                console.log(map.size); // Number of pairs
+// example1
+
+        const map1 = new Map([
+            ['name', 'Alice'],
+            ['age', 30],
+            ['job', 'Engineer']
+        ]);
+
+        document.write(map1.get('name')); // Alice
+        document.write(map1.has('age')); // true
+        map1.set('age', 31);
+        document.write(map1.get('age')); // 31
+        map1.delete('job');
+        document.write(map1.size); // 2
+        map1.forEach((value, key) => document.write(`${key}: ${value}`));
+
+     </script>
+ </body>
+ </html>

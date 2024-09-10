@@ -1,0 +1,88 @@
+<!-- Summary
+Function Scope: Variables declared with var are accessible throughout the function where they are declared.
+
+
+Global Scope: Variables declared with var outside a function are globally scoped.
+
+
+Re-declaration: You can re-declare variables within the same scope.
+
+
+Hoisting: Variable declarations are hoisted to the top of their scope,
+ but initializations are not. Functions can be called before they are declared due to hoisting.
+These examples illustrate the basic behavior of var and how it can impact code execution due to
+ its function-scoped nature and hoisting. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+
+
+// method 1
+
+        function exampleVar() {
+            document.write(x); // undefined (due to hoisting)
+        // because var is not defined you get output undefined 
+
+
+            var x = 10;
+            document.write(x); // 10
+        }
+
+        exampleVar();
+
+
+
+// method 2
+
+var x=5;
+var y=10;
+var z=x+y;
+
+document.getElementById("demo").innerHTML=z;
+
+
+
+
+// global scope
+
+// globalVar is accessible both inside and outside the function because it is declared in the global scope.
+var globalVar = 'I am global';
+
+function checkGlobalVar() {
+   document.write(globalVar + "<br>"); // 'I am global'
+}
+
+checkGlobalVar();
+document.write(globalVar + "<br>"); // 'I am global'
+
+
+
+
+// redclaration 
+
+
+// in all the variables considered only var can be redeclared 
+
+
+function reDeclarationExample() {
+    var num = 10;
+    document.write(num + "<br>"); // 10
+
+    var num = 20; 
+    document.write(num + "<br>"); // 20
+}
+
+reDeclarationExample();
+
+    </script>
+</body>
+</html>

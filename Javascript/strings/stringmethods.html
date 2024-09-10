@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// String Methods allow you to manipulate and query string data in various ways.
+
+
+// String Methods
+
+
+// slice(beginIndex, endIndex)
+// Definition: Extracts a portion of a string from beginIndex to endIndex (not inclusive)
+//  and returns it as a new string.
+// Example1:
+
+let str1 = "Hello, world!";
+document.write(str1.slice(7, 12)+"<br>"); 
+// Output: "world"
+
+
+
+// substring(start, end)
+// Definition: Returns a substring from start index to end index (not inclusive).
+//  Unlike slice, substring handles indices differently when start is greater than end.
+// Example:
+
+let str2 = "Hello, world!";
+document.write(str2.substring(7, 12)+"<br>");
+ // Output: "world"
+
+
+
+
+// replace(searchValue, newValue)
+
+// Definition: Replaces the first occurrence of searchValue with newValue.
+// Example:
+
+let str3 = "Hello, world!";
+document.write(str3.replace("world", "there" +"<br>"));
+ // Output: "Hello, there!"
+
+
+
+
+// replaceAll(searchValue, newValue)
+
+// Definition: Replaces all occurrences of searchValue with newValue.
+// Example:
+
+let str4 = "Hello, world! Welcome to the world!";
+document.write(str4.replaceAll("world", "there" +"<br>")); 
+
+// Output: "Hello, there! Welcome to the there!"
+
+
+
+// toUpperCase()
+// Definition: Converts all characters in the string to uppercase.
+// Example:
+
+let str5 = "Hello, world!";
+document.write(str5.toUpperCase()+"<br>");
+ // Output: "HELLO, WORLD!"
+
+
+
+//  toLowerCase()
+
+// Definition: Converts all characters in the string to lowercase.
+// Example:
+
+let str6 = "Hello, world!";
+document.write(str6.toLowerCase()+"<br>");
+ // Output: "hello, world!"
+
+
+
+//  trim()
+
+// Definition: Removes whitespace from both ends of the string.
+// Example:
+
+let str7 = "   Hello, world!   ";
+document.write(str7.trim()+"<br>");
+ // Output: "Hello, world!"
+
+
+// charAt(index)
+
+// Definition: Returns the character at the specified index.
+// Example:
+
+let str8 = "Hello, world!";
+document.write(str8.charAt(7)+"<br>");
+ // Output: "w"
+
+
+
+// split(separator)
+
+// Definition: Splits the string into an array of substrings based on the separator.
+// Example:
+let str9 = "Hello, world!";
+document.write(str9.split(", ")+"<br>");
+ // Output: ["Hello", "world!"]
+
+
+
+//  indexOf(searchValue, fromIndex)
+
+// Definition: Returns the index of the first occurrence of searchValue starting from fromIndex.
+//  Returns -1 if not found.
+// Example:
+
+let str10 = "Hello, world!";
+document.write(str10.indexOf("world")+"<br>");
+ // Output: 7
+
+
+// search(regex)
+
+// Definition: Executes a search for a match between a regular expression and the string. Returns the index of the match or -1 if not found.
+// Example:
+
+let str11 = "Hello, world!";
+document.write(str11.search(/world/)+"<br>");
+
+// Output: 7
+
+
+// match(regex)
+
+// Definition: Retrieves the result of matching a string against a regular expression. Returns an array of matches or null if no matches.
+// Example:
+
+let str12 = "Hello, world!";
+document.write(str12.match(/world/)+"<br>");
+ // Output: ["world"]
+
+
+// matchAll(regex)
+
+// Definition: Returns an iterator of all matches against a regular expression, including capturing groups.
+// Example:
+
+let str13 = "Hello, world! Hello again!";
+let matches = str13.matchAll(/Hello/g);
+for (const match of matches) {
+    document.write(match[0]+"<br>");
+   // Output: "Hello" "Hello"
+}
+
+
+// includes(searchValue, fromIndex)
+
+// Definition: Determines whether a string contains the specified searchValue, starting from fromIndex.
+// Example:
+
+let str14 = "Hello, world!";
+document.write(str14.includes("world")+"<br>"); 
+
+// Output: true
+
+
+// concat(...strings)
+
+// Definition: Combines multiple strings into one.
+// Example:
+
+let str15 = "Hello";
+let str16 = "world";
+document.write(str15.concat(", ", str16, "!")+"<br>"); 
+// Output: "Hello, world!"
+
+
+
+        
+    </script>
+</body>
+</html>

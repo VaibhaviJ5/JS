@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>querySelectorAll Example</title>
+</head>
+<body>
+    <!-- Description: Returns a static NodeList of all elements that match the specified CSS selector. -->
+    <div class="container">
+        <p class="text">First Paragraph</p>
+        <p class="text">Second Paragraph</p>
+    </div>
+    <script>
+        // Get all <p> elements with class 'text'
+            var paragraphs = document.querySelectorAll('.text');
+            paragraphs.forEach(function(paragraph) {
+            document.write(paragraph.textContent); 
+            
+            
+            // Outputs: First Paragraph, Second Paragraph
+        });
+    </script>
+</body>
+</html>

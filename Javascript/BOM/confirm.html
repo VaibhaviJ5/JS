@@ -1,0 +1,26 @@
+<!-- Definition:
+confirm is a JavaScript function that displays a dialog box with a specified message and OK and Cancel buttons.
+ It returns true if OK is clicked and false if Cancel is clicked. -->
+
+ <!-- confirm(message); -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <script>
+ 
+        let userConfirmed = confirm('Do you want to proceed?');
+        if (userConfirmed) {
+            document.write('User chose OK');
+        } else {
+            document.write('User chose Cancel');
+        }
+
+     </script>
+
+ </body>
+ </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>removeChild Example</title>
+</head>
+<body>
+    <div id="parentDiv">
+        <p id="childToRemove">This paragraph will be removed.</p>
+        <!-- Description: Removes a child node from the DOM. -->
+        <p>Another paragraph.</p>
+    </div>
+    <script>
+        // Get the parent and child elements
+        var parentDiv = document.getElementById('parentDiv');
+        var childToRemove = document.getElementById('childToRemove');
+        
+        // Remove the child element
+        parentDiv.removeChild(childToRemove);
+    </script>
+</body>
+</html>

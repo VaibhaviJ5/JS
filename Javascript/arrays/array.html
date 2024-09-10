@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // create an array 
+        var colors = ["Red", "Green", "Blue"];
+        // Accessing Array Elements:
+        var firstColor = colors[0]; // "Red"
+        var secondColor = colors[1]; // "Green"
+
+        // Modifying Array Elements:
+        colors[1] = "Yellow"; // Changes "Green" to "Yellow"
+
+        // Array Length:
+        var length = colors.length; // 3
+        document.write(length + "<br>"); 
+
+        // Adding Elements to an Array:
+        // Adds "Purple" to the end of the array
+        colors.push("Purple"); 
+         // output of the below code will be red, yellow, blue , purple
+        document.write(colors + "<br>"); 
+
+
+
+        // Removing Elements from an Array:
+        // removes the last element of the array 
+        var removedColor = colors.pop(); 
+        // output of the below code will be red, yellow, blue 
+         document.write(colors + "<br>"); 
+
+        //  Iterating Over an Array:
+                for (var i = 0; i < colors.length; i++) {
+                document.write(colors[i] + "<br>");
+                }
+                // Or using forEach
+                colors.forEach(function(color) {
+                    document.write(color + "<br>") ;
+                    });
+
+          
+
+// ARRAY METHODS
+
+
+// find() array 
+                // The find() method returns the first element in the array that satisfies the provided testing function.
+                // Example: Using find to get the first number greater than 3
+                const numbers = [1, 2, 3, 4, 5];
+                const firstGreaterThanThree = numbers.find(number => number > 3);
+
+                document.write('<h3>Using find()</h3>');
+                document.write('<p>First Number Greater Than 3: ' + firstGreaterThanThree + '</p>');
+
+                
+
+// some() array 
+                // The some() method tests whether at least one 
+                // element in the array passes the test implemented by the provided function. 
+            
+                     // Example: Using some to check if any number is greater than 4
+                const numbers1 = [1, 2, 3, 4, 5];
+                const hasNumberGreaterThanFour = numbers1.some(number => number > 4);
+
+                document.write('<h3>Using some()</h3>');
+                document.write('<p>Has Number Greater Than 4: ' + hasNumberGreaterThanFour + '</p>');
+
+
+
+
+// every() array 
+                // The every() method tests whether all elements in the array pass the test implemented by the provided function.
+        
+// Example: Using every to check if all numbers are greater than 0
+                const numbers2 = [1, 2, 3, 4, 5];
+                const allGreaterThanZero = numbers2.every(number => number > 0);
+
+                document.write('<h3>Using every()</h3>');
+                document.write('<p>All Numbers Greater Than 0: ' + allGreaterThanZero + '</p>');
+
+
+    </script>
+
+</body>
+</html>

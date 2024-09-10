@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Backticks (`), also known as template literals in JavaScript, offer enhanced 
+    functionality compared to single and double quotes.
+     They support multi-line strings, string interpolation, and embedded expressions.  -->
+
+
+    <script>
+// Basic String 
+// A simple string enclosed in backticks behaves similarly to a string enclosed in single or double quotes.
+            let name0 = 'Alice';
+            let templateString = `Hello, ${name0}!`;
+            document.write(templateString);
+ // Output: Hello, Alice!
+
+
+
+//  Multi-Line Strings
+// Template literals allow you to create strings that span multiple lines without the need for escape characters.
+
+
+
+        let multiLineString = `This is a string
+        that spans multiple lines
+        without needing escape characters.`;
+        document.write(multiLineString);
+
+        // Output:
+        // This is a string
+        // that spans multiple lines
+        // without needing escape characters.
+
+
+
+        // String Interpolation
+        // You can embed expressions inside template literals using ${}. This is often used for inserting variables or expressions into a string.
+
+            let name1 = 'Alice';
+            let age1 = 30;
+            let greeting = `Hello, my name is ${name1} and I am ${age1} years old.`;
+            console.log(greeting);
+
+// Output: Hello, my name is Alice and I am 30 years old.
+
+
+            //  Embedded Expressions
+            // You can use more complex expressions inside ${} in template literals.
+
+          
+            let a = 5;
+            let b = 10;
+            let result = `The sum of ${a} and ${b} is ${a + b}.`;
+            console.log(result); 
+            
+        // Output: The sum of 5 and 10 is 15.
+
+
+            // Nesting Template Literals
+            // You can nest template literals within each other.
+
+          
+            let name2 = 'Bob';
+            let message = `Welcome, ${name2}! Your current status is: ${`Active`}`;
+            console.log(message);
+             // Output: Welcome, Bob! Your current status is: Active
+           
+           
+            //  Tagged Template Literals
+            // Tagged template literals allow you to parse template literals with a function. 
+            // This advanced feature is used for more customized string processing.
+
+           
+            function tag(strings, ...values) {
+                console.log(strings); // Array of string literals
+                console.log(values); // Array of interpolated values
+                return strings[0] + values.join('') + strings[1];
+            }
+
+            let name = 'Charlie';
+            let age = 25;
+            let output = tag`Name: ${name}, Age: ${age}`;
+            console.log(output); 
+            // explaination
+                    //             tag(strings, ...values): This is a function named tag that will be used to process the template literal.
+
+                    // strings: This parameter is an array of the string literals from the template literal. Each element of the array corresponds to a segment of the string literal that isn't interpolated.
+                    // ...values: This is the rest parameter that collects all the interpolated values (the expressions within ${}) from the template literal into an array.
+                    // console.log(strings);: This logs the strings array, which contains the string literals. For the template literal tag function, this array will hold the text segments before and after each interpolation.
+
+                    // console.log(values);: This logs the values array, which contains the interpolated values. Each value corresponds to an expression within ${} in the template literal.
+
+                    // return strings[0] + values.join('') + strings[1];: This constructs the final string by combining:
+
+                    // strings[0]: The text before the first interpolation.
+                    // values.join(''): The interpolated values concatenated together.
+                    // strings[1]: The text after the last interpolation.
+
+                    // let name = 'Charlie';: Defines a variable name with the value 'Charlie'.
+
+                    //     let age = 25;: Defines a variable age with the value 25.
+
+                    //     let output = tagName: ${name}, Age: ${age};: This is where the tagged template literal is used. The tag function processes the template literal:
+
+                    //     strings array will be ["Name: ", ", Age: ", ""].
+                    //     values array will be ["Charlie", 25].
+                    //     console.log(output);: Logs the result of the tag function.
+                                
+            // Output: Name: Charlie, Age: 25
+
+
+            // Expression Evaluation
+            // You can perform complex operations and evaluations within template literals.
+
+            
+            let x = 10;
+            let y = 20;
+            let comparison = `The larger number is ${x > y ? x : y}.`;
+            console.log(comparison);
+            
+            // Output: The larger number is 20.
+
+ 
+
+    </script>
+</body>
+</html>

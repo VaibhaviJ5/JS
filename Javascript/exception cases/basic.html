@@ -1,0 +1,113 @@
+<!-- In JavaScript, exceptions are unexpected situations that arise during the execution of a program,
+ which can disrupt the normal flow of the application. Exception handling in JavaScript is primarily managed using try...catch blocks. However, there are various scenarios and edge cases where exceptions can arise or behave in unexpected ways. Here’s an overview of some common and less common exception cases in JavaScript: -->
+
+1. Syntax Errors
+Syntax errors occur when the code violates the syntax rules of the language. These errors are detected at compile-time and prevent the code from running.
+Example:
+// Missing closing parenthesis
+console.log("Hello, world!";
+This will result in a syntax error and the code will not run.
+
+2. Reference Errors
+Reference errors occur when trying to access a variable or function that does not exist or is not in scope.
+Example:
+console.log(nonExistentVariable); // ReferenceError: nonExistentVariable is not defined
+
+
+3. Type Errors
+Type errors occur when an operation is performed on a value of an incorrect type.
+Example:
+const num = 42;
+num.toUpperCase(); // TypeError: num.toUpperCase is not a function
+
+
+4. Range Errors
+Range errors occur when a value is not within the range of acceptable values.
+Example:
+// Trying to create an array with an invalid length
+const arr = new Array(-1); // RangeError: Invalid array length
+
+5. Eval Errors
+Eval errors are related to the eval() function, which is used to execute code represented as a string. In modern JavaScript, 
+eval() is generally discouraged due to security and performance reasons.
+Example:
+try {
+  eval('var x = ;'); // EvalError: Syntax error
+} catch (e) {
+  console.log(e); // Logs the EvalError
+}
+
+
+6. Custom Errors
+You can create custom error types by extending the built-in Error class. This is useful for
+ creating more descriptive error messages or handling specific error scenarios.
+Example:
+class CustomError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'CustomError';
+  }
+}
+
+try {
+  throw new CustomError('This is a custom error');
+} catch (e) {
+  console.log(e.name + ': ' + e.message); // CustomError: This is a custom error
+}
+
+
+7. Unhandled Promise Rejections
+When a Promise is rejected and there is no .catch() handler to handle the rejection, it may result in an unhandled promise rejection. 
+In Node.js, this can terminate the process if not handled.
+Example:
+new Promise((resolve, reject) => {
+  reject('Error occurred');
+});
+If you don’t handle the rejection, it will log an unhandled promise rejection warning.
+
+Handling:
+
+new Promise((resolve, reject) => {
+  reject('Error occurred');
+}).catch(error => {
+  console.log(error); // Logs 'Error occurred'
+});
+
+
+8. Errors in finally Block
+The finally block is executed regardless of whether an exception was thrown or not.
+ If an error occurs in the finally block, it can suppress the original error.
+Example:
+try {
+  throw new Error('Main error');
+} finally {
+  throw new Error('Error in finally'); // This will overwrite the original error
+}
+In this case, only "Error in finally" will be reported, and "Main error" will be lost.
+
+9. Error Handling in Async Functions
+Async functions return promises, and unhandled errors in async functions can result in unhandled promise rejections.
+Example:
+async function example() {
+  throw new Error('Async error');
+}
+
+example(); // Returns a promise that is rejected with 'Async error'
+Handling:
+
+example().catch(error => {
+  console.log(error.message); // Logs 'Async error'
+});
+
+
+Summary
+JavaScript exceptions come in various forms, including syntax errors, reference errors, type errors, and more.
+ Properly handling these exceptions with try...catch, 
+custom error types, and proper promise handling is crucial for writing robust and error-resistant JavaScript code.
+
+try: Encloses code that may throw an exception.
+catch: Catches and handles exceptions thrown in the try block.
+throw: Creates a custom error that can be caught by a catch block.
+finally: Executes code after try and catch, regardless of whether an error was thrown.
+These constructs allow for robust error handling and cleanup in JavaScript, helping ensure
+ that your code can handle errors gracefully and maintain stability.

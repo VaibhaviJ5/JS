@@ -1,0 +1,69 @@
+<!-- In JavaScript, get and set methods are part of the ES6 (ECMAScript 2015) features that allow you to define 
+property accessors on objects. 
+They are used to define how properties are read and written. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Setter (set): A method that sets or updates the value of a property. -->
+    <!-- Use set to define a method for setting a property value. -->
+    <script>
+                        class BankAccount {
+                        constructor(initialBalance) {
+                            this._balance = initialBalance;
+                        }
+
+                        // Getter for the balance property
+                        get balance() {
+                            return this._balance;
+                        }
+
+                        // Setter for the balance property
+                        set balance(amount) {
+                            if (amount >= 0) {
+                            this._balance = amount;
+                            } else {
+                            document.write('Balance cannot be negative');
+                            }
+                        }
+                        }
+
+                        const account = new BankAccount(100);
+
+                        document.write(account.balance); 
+                        // 100 (uses the getter method)
+
+                        // Update the balance
+                        account.balance = 200;
+                        document.write(account.balance);
+                        //  200 (uses the getter method)
+
+
+
+                        // Attempt to set a negative balance
+                        account.balance = -50; 
+                        // Balance cannot be negative
+                        document.writeg(account.balance); 
+                        // 200 (balance remains unchanged)
+
+        
+
+
+                        // we have different methods of set method like 
+                        // setfullyear()-(yyyy)
+                        // set_month() - 0-11
+                        // set_dates() -(1-31)
+                        // set_day() - (0-6)
+                        // set_hours() - (0-23)
+                        // set_minutes() - (0-59)
+                        // set_seconds() - (0-59)
+                        // set_milliseconds()- (0-999)
+                        // set_time() - jan,1 1970
+    </script>
+</body>
+</html>

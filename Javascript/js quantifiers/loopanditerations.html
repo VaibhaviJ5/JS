@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loop Constructs: Control the number of times a block of code executes in JavaScript.</h1>
+    <script>
+        // Quantifiers in the context of loops and iterations refer to controlling how many times a block of code should execute. JavaScript provides several loop structures:
+
+// for Loop: Executes a block of code a specific number of times.
+
+                // Example:
+
+                for (let i = 0; i < 5; i++) {
+                console.log(i);
+                 // Outputs 0, 1, 2, 3, 4
+                }
+
+// while Loop: Repeats a block of code while a condition is true.
+
+                    // Example:
+
+
+                    let j = 0;
+                    while (j < 5) {
+                    console.log(j); 
+                    // Outputs 0, 1, 2, 3, 4
+                    j++;
+                    }
+
+
+// do...while Loop: Executes a block of code once, and then repeats it while a condition is true.
+
+// Example:
+            let k = 0;
+            do {
+            console.log(k);
+            // Outputs 0, 1, 2, 3, 4
+           k++;
+            } while (k < 5);
+
+
+// for...in Loop: Iterates over enumerable properties of an object.
+
+// Example:
+
+
+            const obj = { a: 1, b: 2, c: 3 };
+            for (let key in obj) {
+            console.log(key + ': ' + obj[key]); 
+            
+            // Outputs "a: 1", "b: 2", "c: 3"
+            }
+
+// for...of Loop: Iterates over iterable objects like arrays, strings, etc.
+
+// Example:
+
+
+            const arr = [10, 20, 30];
+            for (let value of arr) {
+            console.log(value); 
+            // Outputs 10, 20, 30
+            }
+        
+    </script>
+</body>
+</html>

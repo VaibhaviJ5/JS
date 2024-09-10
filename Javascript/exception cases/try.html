@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The try block contains the code that might throw an exception.
+         It is where you place the code that you want to test for errors.</h2>
+<!-- basic syntax
+    try {
+        // Code that may throw an error
+      } catch (error) {
+        // Code to handle the error
+      } -->
+      
+    <script>
+            try {
+            let result = 10 / 0; 
+            // This will not throw an error
+            document.write(result);
+            } catch (error) {
+            document.write('Error caught:', error);
+            }
+
+        
+    </script>
+</body>
+</html>

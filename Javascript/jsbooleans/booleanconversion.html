@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JavaScript has a concept of truthy and falsy values,
+     which are values that coerce to true or false in a boolean context. -->
+    <script>
+            let number = 0;
+            let text = "";
+
+            if (number) {
+               document.write('Number is truthy.');
+            } else {
+                document.write('Number is falsy.');
+                 // This will be printed because 0 is falsy
+            }
+
+            if (text) {
+                document.write('Text is truthy.');
+            } else {
+                document.write('Text is falsy.'); 
+                // This will be printed because an empty string is falsy
+            }
+
+        
+    </script>
+</body>
+</html>

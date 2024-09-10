@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Definition: Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their
+     containing scope during the compile phase. However, only the declarations are hoisted, not the initializations. -->
+    <script>
+
+        // Function declarations are hoisted, so you can call the function before its definition in the code.
+
+
+        document.write(greet());
+         // Outputs: 'Hello, World!'
+
+        function greet() {
+            return 'Hello, World!';
+        }
+
+    </script>
+</body>
+</html>

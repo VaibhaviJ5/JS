@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onmousemove Example</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: lightgreen;
+            border: 2px solid green;
+            position: relative;
+        }
+        .coordinates {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- This event handler is triggered whenever the mouse is moved while over an element. -->
+    <div class="box" onmousemove="mouseMoved(event)">
+        <div class="coordinates" id="coords">Move your mouse!</div>
+    </div>
+
+    <script>
+        function mouseMoved(event) {
+            var coords = document.getElementById('coords');
+            coords.textContent = 'X: ' + event.clientX + ', Y: ' + event.clientY;
+        }
+    </script>
+</body>
+</html>

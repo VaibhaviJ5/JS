@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The finally block, if used, will execute after the try and catch blocks,
+         regardless of whether an exception was thrown or not. It is useful for code that needs to run regardless of whether an error occurred, such as cleanup tasks.
+
+        <!-- Syntax:
+        try {
+          // Code that may throw an error
+        } catch (error) {
+          // Handle the error
+        } finally {
+          // Code that will always execute
+    }-->
+        </h1> 
+    <script>
+        function readFile() {
+            let file;
+            try {
+                file = openFile('file.txt'); 
+                // Hypothetical function
+                // Process the file
+            } catch (error) {
+                console.error('Error:', error.message);
+            } finally {
+                if (file) {
+                file.close();
+                 // Ensure file is closed
+                }
+            }
+            }
+
+        
+    </script>
+</body>
+</html>

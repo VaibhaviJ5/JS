@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The catch block executes if an error is thrown in the try block.
+        It receives the error object, which contains details about the error.</h2>
+
+        <!--basic syntax
+         try {
+            // Code that may throw an error
+          } catch (error) {
+            // Handle the error
+            console.error('Error:', error.message);
+          }
+           -->
+    <script>
+            try {
+            let json = '{"name": "John", "age":}';
+             // Invalid JSON
+            let user = JSON.parse(json);
+            } catch (error) {
+            console.error('JSON Parsing Error:', error.message);
+            }
+ 
+    </script>
+</body>
+</html>

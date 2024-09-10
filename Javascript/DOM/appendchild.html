@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>appendChild Example</title>
+</head>
+<body>
+    <div id="parentDiv">
+        <p>Original paragraph.</p>
+        <!-- Description: Appends a node to the end of the child nodes of a specified parent node. -->
+
+
+    </div>
+    <script>
+        // Create a new <p> element
+        var newParagraph = document.createElement('p');
+        newParagraph.textContent = 'Appended paragraph.';
+        
+        // Append the new paragraph to the div with id 'parentDiv'
+        var parentDiv = document.getElementById('parentDiv');
+        parentDiv.appendChild(newParagraph);
+    </script>
+</body>
+</html>

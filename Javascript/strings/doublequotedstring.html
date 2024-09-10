@@ -1,0 +1,79 @@
+<!-- Double Quotes ("): -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let doubleQuoteString = "Hello, World!";
+    document.write(doubleQuoteString + "<br>");
+
+    let quote = "It's a beautiful day!";
+    document.write(quote + "<br>"); 
+    // Output: It's a beautiful day!
+
+    // Using Double Quotes Inside Double Quotes (Escaping)
+
+    // To include double quotes within a string that is also enclosed in double quotes, 
+    // you need to escape them with a backslash (\).
+
+        let dialogue = "He said, \"Hello, how are you?\"";
+        document.write(dialogue + "<br>"); 
+        // Output: He said, "Hello, how are you?"
+
+
+        // Concatenation with Double Quotes
+        // You can concatenate strings using the + operator, even if they are enclosed in double quotes.
+        let firstPart = "Hello";
+        let secondPart = "World";
+        let combined = firstPart + " " + secondPart + "!";
+        console.log(combined + "<br>"); 
+        
+        // Output: Hello World!
+
+
+        // Multiline Strings
+        //     Double quotes do not support multiline strings directly.
+        //     For multiline text, you would typically use backticks (template literals).
+        //     However, you can still manually concatenate strings to achieve multiline effects.
+
+        let multiline = "This is line 1.\n" +
+                "This is line 2.\n" +
+                "This is line 3.";
+             document.write(multiline + "<br>");
+
+// Output:
+// This is line 1.
+// This is line 2.
+// This is line 3.
+
+
+// Escaping Double Quotes Inside Double Quotes
+// In a more complex example, you might need to escape double quotes for special cases:
+
+
+        let escapedQuotes = "She said, \"He said, \\\"Hello!\\\"\"";
+        document.write(escapedQuotes + "<br>");
+// Output: She said, "He said, \"Hello!\""
+
+
+// Including Special Characters
+// Double quotes can also be used to include special characters in a string.
+
+let specialChars = "Line1\nLine2\tTabbed";
+document.write(specialChars + "<br>");
+
+
+// Output:
+// Line1
+// Line2   Tabbed
+
+
+        
+    </script>
+</body>
+</html>

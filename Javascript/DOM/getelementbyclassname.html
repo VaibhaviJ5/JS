@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByClassName Example</title>
+</head>
+<body>
+    <div class="myClass">First</div>
+    <div class="myClass">Second</div>
+    <div class="myClass">Third</div>
+    <!-- Description: Returns a live HTMLCollection of elements with the specified class name. -->
+    <script>
+        // Get elements with class 'myClass'
+        var elements = document.getElementsByClassName('myClass');
+        for (var i = 0; i < elements.length; i++) {
+            document.write(elements[i].textContent);
+            
+            // Outputs: First, Second, Third
+        }
+    </script>
+</body>
+</html>
